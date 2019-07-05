@@ -13,17 +13,17 @@ public class RegisterResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_result);
-        // Inisialisasi variabel
+
         tvResultNama = findViewById(R.id.tvResultNama);
         tvResultTaanggalLahir= findViewById(R.id.tvResultTanggalLahir);
         tvResultJenisKelamin = findViewById(R.id.tvResultJenisKelamin);
         tvResultUsername = findViewById(R.id.tvResultUsername);
 
-        String[] stringArray = getIntent().getStringArrayExtra(RegisterActivity.Key_RegisterAtivity);
+        String[] fromIntent = getIntent().getStringArrayExtra(RegisterActivity.Key_RegisterAtivity);
 
-        tvResultNama.setText(stringArray[0]);
-        tvResultTaanggalLahir.setText(stringArray[1]);
-        tvResultJenisKelamin.setText(stringArray[2]);
-        tvResultUsername.setText(stringArray[3]);
+        tvResultNama.setText(fromIntent[0]);
+        tvResultTaanggalLahir.setText(fromIntent[1]);
+        tvResultJenisKelamin.setText(fromIntent[2]);
+        tvResultUsername.setText(fromIntent[3]);
     }
 }
