@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import polinema.ac.id.dtsdesigntolayout.Model.Register;
+
 public class RegisterResultActivity extends AppCompatActivity {
 
     // Tambahkan variabel di sini
@@ -19,11 +21,12 @@ public class RegisterResultActivity extends AppCompatActivity {
         tvResultJenisKelamin = findViewById(R.id.tvResultJenisKelamin);
         tvResultUsername = findViewById(R.id.tvResultUsername);
 
-        String[] fromIntent = getIntent().getStringArrayExtra(RegisterActivity.Key_RegisterAtivity);
+        //String[] fromIntent = getIntent().getStringArrayExtra(RegisterActivity.Key_RegisterAtivity);
+        Register register = getIntent().getParcelableExtra(RegisterActivity.Key_RegisterAtivity);
 
-        tvResultNama.setText(fromIntent[0]);
-        tvResultTaanggalLahir.setText(fromIntent[1]);
-        tvResultJenisKelamin.setText(fromIntent[2]);
-        tvResultUsername.setText(fromIntent[3]);
+        tvResultNama.setText(register.getNama());
+        tvResultTaanggalLahir.setText(register.getTanggalLahir());
+        tvResultJenisKelamin.setText(register.getJenisKelamin());
+        tvResultUsername.setText(register.getUsername());
     }
 }

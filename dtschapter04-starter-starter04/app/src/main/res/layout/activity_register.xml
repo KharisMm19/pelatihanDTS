@@ -116,6 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:text="Laki-laki"
+            android:checked="true"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="367dp" />
 
@@ -125,6 +126,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:text="Perempuan"
+            android:checked="true"
             app:layout_constraintStart_toEndOf="@+id/rb_laki"
             tools:layout_editor_absoluteY="367dp" />
     </RadioGroup>
