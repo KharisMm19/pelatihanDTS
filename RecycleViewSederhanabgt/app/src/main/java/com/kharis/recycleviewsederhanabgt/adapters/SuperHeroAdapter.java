@@ -16,6 +16,10 @@ import java.util.List;
 public class SuperHeroAdapter extends RecyclerView.Adapter<SuperHeroAdapter.MyViewHolder> {
     List<SuperHero> heroList;
 
+    public SuperHeroAdapter(List<SuperHero> heroList) {
+        this.heroList = heroList;
+    }
+
     @NonNull
     @Override
     public SuperHeroAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
