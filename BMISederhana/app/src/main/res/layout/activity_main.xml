@@ -25,23 +25,23 @@
         <RadioButton
             android:id="@+id/pilihMale"
             android:layout_width="@dimen/_150dp"
-            android:gravity="center"
             android:layout_height="wrap_content"
-            android:background="@drawable/radio_flat_selector"
+            android:textColor="@drawable/radio_flat_text_selector"
             android:button="@android:color/transparent"
-            android:checked="true"
+            android:gravity="center"
             android:paddingLeft="@dimen/_30dp"
             android:paddingTop="@dimen/_30dp"
             android:paddingRight="@dimen/_30dp"
             android:paddingBottom="@dimen/_30dp"
             android:text="Male"
-            android:textColor="@drawable/radio_flat_text_selector"/>
+            android:background="@drawable/radio_flat_selector"
+             />
 
         <RadioButton
             android:id="@+id/pilihFemale"
             android:layout_width="@dimen/_150dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/radio_flat_selector"
+            android:textColor="@drawable/radio_flat_text_selector"
             android:button="@android:color/transparent"
             android:checked="true"
             android:gravity="center"
@@ -50,7 +50,7 @@
             android:paddingRight="@dimen/_30dp"
             android:paddingBottom="@dimen/_30dp"
             android:text="Female"
-            android:textColor="@drawable/radio_flat_text_selector" />
+            android:background="@drawable/radio_flat_selector"/>
     </RadioGroup>
 
     <TextView
@@ -58,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:gravity="center_horizontal"
         android:text="@string/bobot"
@@ -115,6 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="0"
+        android:inputType="number"
         android:textSize="45dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
