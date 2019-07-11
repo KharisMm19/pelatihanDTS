@@ -21,19 +21,6 @@
         />
 
     <TextView
-        android:id="@+id/txt_sign_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="serif-monospace"
-        android:text="Sign Up to Continue"
-        android:textColor="#9b9b9b"
-        android:textSize="16sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/register" />
-
-    <TextView
         android:id="@+id/txt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,7 +30,7 @@
         android:textColor="#313131"
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_sign_up" />
+        app:layout_constraintTop_toBottomOf="@+id/register" />
 
     <EditText
         android:id="@+id/edt_firstname"
@@ -52,6 +39,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
         android:hint="First Name"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt_name" />
 
@@ -62,20 +50,48 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
         android:hint="Last Name"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/edt_firstname"
         app:layout_constraintTop_toBottomOf="@id/txt_name" />
+
+    <TextView
+        android:id="@+id/txt_tanggal_lahir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Tanggal Lahir"
+        android:textColor="#313131"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_firstname" />
+
+    <EditText
+        android:id="@+id/edt_tanggal_lahir"
+        android:layout_width="361dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="yyyy/MM/dd"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tanggal_lahir" />
 
     <TextView
         android:id="@+id/txt_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:text="Email"
         android:textColor="#313131"
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_firstname" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_tanggal_lahir" />
 
     <EditText
         android:id="@+id/edt_email"
@@ -85,6 +101,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="24dp"
         android:hint="Enter Your Email"
+        android:inputType="textEmailAddress"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt_email"
@@ -95,7 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:text="Create Password"
         android:textColor="#313131"
         android:textSize="20sp"
@@ -110,6 +127,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="24dp"
         android:hint="Enter Your Password"
+        android:inputType="textPassword"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_new_password" />
@@ -133,15 +151,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:background="#6699FF"
-        android:onClick="clickSignUp"
         android:text="SIGN UP"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_login" />
+        app:layout_constraintTop_toBottomOf="@id/txt_login"
+        android:onClick="postSignUp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
